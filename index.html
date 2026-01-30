@@ -1981,7 +1981,8 @@
                 }
             });
             
-            // Show feedback
+            // Save state and show feedback
+            saveState();
             showRestToast('Short Rest', `Recovered ${recovered} Healer's Dice`);
         }
 
@@ -1996,9 +1997,63 @@
                 checkbox.checked = false;
             });
             
-            // Show feedback
+            // Save state and show feedback
+            saveState();
             showRestToast('Long Rest', 'All slots & dice recovered');
         }
+
+        // LocalStorage functions
+        function saveState() {
+            const state = {
+                spellSlots: [],
+                healerDice: []
+            };
+            
+            // Save spell slots
+            document.querySelectorAll('.slot-box:not(.healer-dice) .slot-checkbox').forEach((checkbox, index) => {
+                state.spellSlots[index] = checkbox.checked;
+            });
+            
+            // Save healer dice
+            document.querySelectorAll('.slot-box.healer-dice .slot-checkbox').forEach((checkbox, index) => {
+                state.healerDice[index] = checkbox.checked;
+            });
+            
+            localStorage.setItem('elara-character-state', JSON.stringify(state));
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem('elara-character-state');
+            if (!saved) return;
+            
+            try {
+                const state = JSON.parse(saved);
+                
+                // Restore spell slots
+                document.querySelectorAll('.slot-box:not(.healer-dice) .slot-checkbox').forEach((checkbox, index) => {
+                    if (state.spellSlots && state.spellSlots[index] !== undefined) {
+                        checkbox.checked = state.spellSlots[index];
+                    }
+                });
+                
+                // Restore healer dice
+                document.querySelectorAll('.slot-box.healer-dice .slot-checkbox').forEach((checkbox, index) => {
+                    if (state.healerDice && state.healerDice[index] !== undefined) {
+                        checkbox.checked = state.healerDice[index];
+                    }
+                });
+            } catch (e) {
+                console.error('Error loading saved state:', e);
+            }
+        }
+
+        // Auto-save when checkboxes change
+        document.querySelectorAll('.slot-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', saveState);
+        });
+
+        // Load state on page load
+        loadState();
 
         function showRestToast(title, message) {
             const toast = document.getElementById('diceToast');
