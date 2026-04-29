@@ -817,6 +817,10 @@
             margin-bottom: 20px;
         }
 
+        .slot-box.healer-dice {
+            grid-column: 1 / -1;
+        }
+
         .slot-box {
             background: var(--parchment-dark);
             border: 1px solid var(--border-ornate);
@@ -1020,7 +1024,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             .slot-box.healer-dice {
-                grid-column: span 2;
+                grid-column: 1 / -1;
             }
             .buff-options {
                 grid-template-columns: 1fr;
@@ -1057,7 +1061,7 @@
         <!-- Header -->
         <div class="header">
             <h1 class="character-name">Elara</h1>
-            <p class="character-subtitle">Halfling Healer (Vow of the Augmenter) 7 • Sage</p>
+            <p class="character-subtitle">Halfling Healer (Vow of the Augmenter) 9 • Sage</p>
         </div>
 
         <!-- Combat Stats -->
@@ -1069,7 +1073,7 @@
             </div>
             <div class="combat-stat">
                 <div class="combat-stat-label">Hit Points</div>
-                <div class="combat-stat-value">65</div>
+                <div class="combat-stat-value">92</div>
                 <div class="combat-stat-note">d6 + Tough</div>
             </div>
             <div class="combat-stat">
@@ -1104,13 +1108,13 @@
                 </div>
                 <div class="ability-box prof">
                     <div class="ability-name">CON</div>
-                    <div class="ability-score">16</div>
-                    <div class="ability-mod">+3</div>
+                    <div class="ability-score">18</div>
+                    <div class="ability-mod">+4</div>
                     <div class="ability-separator"></div>
                     <div class="ability-save-dual">
-                        <div class="ability-save" data-save="Constitution" data-bonus="6">+6</div>
+                        <div class="ability-save" data-save="Constitution" data-bonus="7">+7</div>
                         <div class="ability-save-divider">|</div>
-                        <div class="ability-save conc" data-save="Concentration" data-bonus="11">+11</div>
+                        <div class="ability-save conc" data-save="Concentration" data-bonus="12">+12</div>
                     </div>
                     <div class="ability-save-labels">
                         <span>save</span><span>conc</span>
@@ -1208,7 +1212,7 @@
             </div>
 
             <div class="feature-category">
-                <div class="feature-category-header">Healer Features (Level 7)</div>
+                <div class="feature-category-header">Healer Features (Level 9)</div>
                 <div class="feature-category-content">
                     <div class="feature-item"><span class="feature-name">Expert Physician:</span> +5 (INT) to chosen skill check</div>
                     <div class="feature-item"><span class="feature-name">Combat Supporter:</span> +1 to attack rolls and save DCs for ally targeted by lvl 1+ spell (until next turn)</div>
@@ -1217,7 +1221,7 @@
                         <div class="feature-sub">• <strong>Life's Embrace:</strong> Cast spells on tethered creature as if within 5 ft (including Touch)</div>
                         <div class="feature-sub">• <strong>Healer's Protection:</strong> Reaction to grant Advantage on tethered creature's save</div>
                     </div>
-                    <div class="feature-item"><span class="feature-name">Healer's Dice:</span> 14d8 (max 2 at once), regain all on Long Rest</div>
+                    <div class="feature-item"><span class="feature-name">Healer's Dice:</span> 18d8 (max 2 at once), regain all on Long Rest</div>
                     <div class="feature-item"><span class="feature-name">Master Healer:</span>
                         <div class="feature-sub">• <strong>Dice Restoration:</strong> Regain 5 dice on Short Rest</div>
                         <div class="feature-sub">• <strong>Extra Healing:</strong> Add Healer's Dice to healing spells</div>
@@ -1239,7 +1243,7 @@
             <div class="feature-category">
                 <div class="feature-category-header ruby">Feat & Background</div>
                 <div class="feature-category-content">
-                    <div class="feature-item"><span class="feature-name">Tough:</span> +14 HP (2 × level)</div>
+                    <div class="feature-item"><span class="feature-name">Tough:</span> +18 HP (2 × level)</div>
                     <div class="feature-item"><span class="feature-name">Sage - Researcher:</span> Know where to find information you don't know</div>
                 </div>
             </div>
@@ -1252,11 +1256,11 @@
             <div class="spellcasting-header">
                 <div class="spell-stat">
                     <div class="spell-stat-label">Spell Save DC</div>
-                    <div class="spell-stat-value">17</div>
+                    <div class="spell-stat-value">18</div>
                 </div>
                 <div class="spell-stat">
                     <div class="spell-stat-label">Spell Attack</div>
-                    <div class="spell-stat-value">+9</div>
+                    <div class="spell-stat-value">+10</div>
                 </div>
                 <div class="spell-stat">
                     <div class="spell-stat-label">Ability</div>
@@ -1299,11 +1303,23 @@
                     <div class="slot-label">4th Level</div>
                     <div class="slot-checkboxes">
                         <input type="checkbox" class="slot-checkbox">
+                        <input type="checkbox" class="slot-checkbox">
+                        <input type="checkbox" class="slot-checkbox">
+                    </div>
+                </div>
+                <div class="slot-box">
+                    <div class="slot-label">5th Level</div>
+                    <div class="slot-checkboxes">
+                        <input type="checkbox" class="slot-checkbox">
                     </div>
                 </div>
                 <div class="slot-box healer-dice">
                     <div class="slot-label">Healer's Dice</div>
                     <div class="slot-checkboxes">
+                        <input type="checkbox" class="slot-checkbox">
+                        <input type="checkbox" class="slot-checkbox">
+                        <input type="checkbox" class="slot-checkbox">
+                        <input type="checkbox" class="slot-checkbox">
                         <input type="checkbox" class="slot-checkbox">
                         <input type="checkbox" class="slot-checkbox">
                         <input type="checkbox" class="slot-checkbox">
@@ -1337,12 +1353,12 @@
             <div class="spell-level">
                 <div class="spell-level-header">1st Level</div>
                 <div class="spell-level-content">
-                    <span class="spell-link" data-spell="bless">Bless</span> <span class="spell-tag subclass">SUB</span>, 
-                    <span class="spell-link" data-spell="jump">Jump</span> <span class="spell-tag subclass">SUB</span>, 
-                    <span class="spell-link" data-spell="healing-word">Healing Word</span> <span class="spell-tag moh">MoH</span>, 
-                    <span class="spell-link" data-spell="false-life">False Life</span> <span class="spell-tag moh">MoH</span>, 
-                    <span class="spell-link" data-spell="cure-wounds">Cure Wounds</span>, 
-                    <span class="spell-link" data-spell="sanctuary">Sanctuary</span>, 
+                    <span class="spell-link" data-spell="bless">Bless</span> <span class="spell-tag subclass">SUB</span>,
+                    <span class="spell-link" data-spell="jump">Jump</span> <span class="spell-tag subclass">SUB</span>,
+                    <span class="spell-link" data-spell="cure-wounds">Cure Wounds</span> <span class="spell-tag moh">MoH</span>,
+                    <span class="spell-link" data-spell="false-life">False Life</span> <span class="spell-tag moh">MoH</span>,
+                    <span class="spell-link" data-spell="healing-word">Healing Word</span> <span class="spell-tag moh">MoH</span>,
+                    <span class="spell-link" data-spell="sanctuary">Sanctuary</span>,
                     <span class="spell-link" data-spell="shield">Shield</span>
                 </div>
             </div>
@@ -1354,9 +1370,8 @@
                     <span class="spell-link" data-spell="enlarge-reduce">Enlarge/Reduce</span> <span class="spell-tag subclass">SUB</span>, 
                     <span class="spell-link" data-spell="prayer-of-healing">Prayer of Healing</span> <span class="spell-tag moh">MoH</span>, 
                     <span class="spell-link" data-spell="arcane-vigor">Arcane Vigor</span> <span class="spell-tag moh">MoH</span>, 
-                    <span class="spell-link" data-spell="regenerating-ward">Regenerating Ward</span>, 
-                    <span class="spell-link" data-spell="warding-bond">Warding Bond</span>, 
-                    <span class="spell-link" data-spell="lesser-restoration">Lesser Restoration</span>, 
+                    <span class="spell-link" data-spell="regenerating-ward">Regenerating Ward</span>,
+                    <span class="spell-link" data-spell="warding-bond">Warding Bond</span>,
                     <span class="spell-link" data-spell="misty-step">Misty Step</span>
                 </div>
             </div>
@@ -1377,11 +1392,24 @@
             <div class="spell-level">
                 <div class="spell-level-header">4th Level</div>
                 <div class="spell-level-content">
-                    <span class="spell-link" data-spell="stoneskin">Stoneskin</span> <span class="spell-tag subclass">SUB</span>, 
-                    <span class="spell-link" data-spell="unlock-potential">Unlock Potential</span> <span class="spell-tag subclass">SUB</span>, 
-                    <span class="spell-link" data-spell="aura-of-life">Aura of Life</span> <span class="spell-tag moh">MoH</span>, 
-                    <span class="spell-link" data-spell="aura-of-purity">Aura of Purity</span> <span class="spell-tag moh">MoH</span>, 
-                    <span class="spell-link" data-spell="heroic-sacrifice">Heroic Sacrifice</span>
+                    <span class="spell-link" data-spell="stoneskin">Stoneskin</span> <span class="spell-tag subclass">SUB</span>,
+                    <span class="spell-link" data-spell="unlock-potential">Unlock Potential</span> <span class="spell-tag subclass">SUB</span>,
+                    <span class="spell-link" data-spell="aura-of-life">Aura of Life</span> <span class="spell-tag moh">MoH</span>,
+                    <span class="spell-link" data-spell="aura-of-purity">Aura of Purity</span> <span class="spell-tag moh">MoH</span>,
+                    <span class="spell-link" data-spell="heroic-sacrifice">Heroic Sacrifice</span>,
+                    <span class="spell-link" data-spell="private-sanctum">Mordenkainen's Private Sanctum</span>
+                </div>
+            </div>
+
+            <div class="spell-level">
+                <div class="spell-level-header">5th Level</div>
+                <div class="spell-level-content">
+                    <span class="spell-link" data-spell="greater-enhance-ability">Greater Enhance Ability</span> <span class="spell-tag subclass">SUB</span>,
+                    <span class="spell-link" data-spell="jotunn-transformation">Jotunn Transformation</span> <span class="spell-tag subclass">SUB</span>,
+                    <span class="spell-link" data-spell="greater-restoration">Greater Restoration</span> <span class="spell-tag moh">MoH</span>,
+                    <span class="spell-link" data-spell="circle-of-power">Circle of Power</span>,
+                    <span class="spell-link" data-spell="mass-cure-wounds">Mass Cure Wounds</span>,
+                    <span class="spell-link" data-spell="teleportation-circle">Teleportation Circle</span>
                 </div>
             </div>
         </div>
@@ -1542,7 +1570,7 @@
                 name: "Cure Wounds",
                 level: "1st",
                 school: "Abjuration",
-                type: "normal",
+                type: "moh",
                 castingTime: "Action",
                 range: "Touch",
                 components: "V, S",
@@ -1812,6 +1840,26 @@
                 description: `<p>You ward a creature within range. Until the spell ends, any creature who targets the warded creature with an attack roll or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects.</p>
                 <p>If the warded creature makes an attack roll, casts a spell that affects an enemy, or deals damage to another creature, this spell ends.</p>`
             },
+            "private-sanctum": {
+                name: "Mordenkainen's Private Sanctum",
+                level: "4th",
+                school: "Abjuration",
+                type: "normal",
+                castingTime: "10 minutes",
+                range: "120 feet",
+                components: "V, S, M (a thin sheet of lead)",
+                duration: "24 hours",
+                description: `<p>You make an area within range magically secure. The area is a Cube that can be as small as 5 feet to as large as 100 feet on each side.</p>
+                <p>When you cast the spell, you decide what sort of security the spell provides, choosing any of the following properties:</p>
+                <p>• Sound can't pass through the barrier at the edge of the warded area.</p>
+                <p>• The barrier appears dark and foggy, preventing vision (including Darkvision) through it.</p>
+                <p>• Sensors created by Divination spells can't appear inside the protected area or pass through the barrier.</p>
+                <p>• Creatures in the area can't be targeted by Divination spells.</p>
+                <p>• Nothing can teleport into or out of the warded area.</p>
+                <p>• Planar travel is blocked within the warded area.</p>
+                <p>Casting this spell on the same spot every day for 365 days makes the spell last until dispelled.</p>`,
+                upcast: "You can increase the size of the Cube by 100 feet for each spell slot level above 4."
+            },
             "heroic-sacrifice": {
                 name: "Heroic Sacrifice",
                 level: "4th",
@@ -1822,6 +1870,86 @@
                 components: "V, S",
                 duration: "Instantaneous",
                 description: `<p>You interpose yourself against the triggering magic, causing it to affect you instead of the original target. The triggering creature is no longer affected by the spell or magical effect, and you become its target, even if you would normally be out of its range. You immediately make the required saving throw against the effect, suffering its consequences on a failure. You do not suffer any effects on a successful save.</p>`
+            },
+            // 5th Level
+            "greater-restoration": {
+                name: "Greater Restoration",
+                level: "5th",
+                school: "Abjuration",
+                type: "moh",
+                castingTime: "Action",
+                range: "Touch",
+                components: "V, S, M (diamond dust worth 100+ GP, which the spell consumes)",
+                duration: "Instantaneous",
+                description: `<p>You touch a creature and magically remove one of the following effects from it:</p>
+                <p>• 1 Exhaustion level</p>
+                <p>• The Charmed or Petrified condition</p>
+                <p>• A curse, including the target's Attunement to a cursed magic item</p>
+                <p>• Any reduction to one of the target's ability scores</p>
+                <p>• Any reduction to the target's Hit Point maximum</p>`
+            },
+            "greater-enhance-ability": {
+                name: "Greater Enhance Ability",
+                level: "5th",
+                school: "Transmutation",
+                type: "subclass",
+                castingTime: "Action",
+                range: "Touch",
+                components: "V, S, M (a gilded tuft of fur or feather)",
+                duration: "Concentration, up to 1 hour",
+                description: `<p>You touch a creature and choose Strength, Dexterity, Constitution, Intelligence, Wisdom or Charisma. For the duration, the target has Advantage on all D20 Tests using the chosen ability.</p>`,
+                upcast: "You can target one additional creature for each spell slot level above 5. You can choose a different ability for each target."
+            },
+            "jotunn-transformation": {
+                name: "Jotunn Transformation",
+                level: "5th",
+                school: "Transmutation",
+                type: "subclass",
+                castingTime: "Action",
+                range: "60 feet",
+                components: "V, S, M (a piece of stone inscribed with a giant rune)",
+                duration: "Concentration, up to 1 minute",
+                description: `<p>Select one creature you can see within range, which is infused with essence of a giant. The target gains the following benefits for the duration.</p>
+                <p><strong>Giant Size.</strong> Its size increases to Huge, if it was not already larger. If there is no room for it to grow, the spell fails. The target's equipment grows with it. Attacks with Unarmed Strikes or a weapon enlarged in this manner deal an extra 1d12 damage.</p>
+                <p><strong>Giant's Strength.</strong> Its Strength score increases to 11 plus twice the spell's level, if it was not already higher (21 at 5th level).</p>
+                <p><strong>Giant's Endurance.</strong> It gains a number of Temporary Hit Points equal to 10 times the spell's level (50 at 5th level).</p>`,
+                upcast: "Use the spell slot's level for the spell's level in the Giant's Strength and Giant's Endurance benefits. If cast with a level 7+ slot, the target becomes Gargantuan instead of Huge and the extra damage increases to 2d12."
+            },
+            "circle-of-power": {
+                name: "Circle of Power",
+                level: "5th",
+                school: "Abjuration",
+                type: "normal",
+                castingTime: "Action",
+                range: "Self",
+                components: "V",
+                duration: "Concentration, up to 10 minutes",
+                description: `<p>An aura radiates from you in a 30-foot Emanation for the duration. While in the aura, you and your allies have Advantage on saving throws against spells and other magical effects. When an affected creature makes a saving throw against a spell or magical effect that allows a save to take only half damage, it takes no damage if it succeeds on the save.</p>`
+            },
+            "teleportation-circle": {
+                name: "Teleportation Circle",
+                level: "5th",
+                school: "Conjuration",
+                type: "normal",
+                castingTime: "1 minute",
+                range: "10 feet",
+                components: "V, M (rare inks worth 50+ GP, which the spell consumes)",
+                duration: "1 round",
+                description: `<p>As you cast the spell, you draw a 5-foot-radius circle on the ground inscribed with sigils that link your location to a permanent teleportation circle of your choice whose sigil sequence you know and that is on the same plane of existence as you. A shimmering portal opens within the circle you drew and remains open until the end of your next turn. Any creature that enters the portal instantly appears within 5 feet of the destination circle or in the nearest unoccupied space if that space is occupied.</p>
+                <p>Many major temples, guildhalls, and other important places have permanent teleportation circles. Each circle includes a unique sigil sequence—a string of runes arranged in a particular pattern. When you first gain this spell, you learn the sigil sequences for two destinations on the Material Plane, determined by the DM.</p>
+                <p>You can create a permanent teleportation circle by casting this spell in the same location every day for 365 days.</p>`
+            },
+            "mass-cure-wounds": {
+                name: "Mass Cure Wounds",
+                level: "5th",
+                school: "Abjuration",
+                type: "normal",
+                castingTime: "Action",
+                range: "60 feet",
+                components: "V, S",
+                duration: "Instantaneous",
+                description: `<p>A wave of healing energy washes out from a point you can see within range. Choose up to six creatures in a 30-foot-radius Sphere centered on that point. Each target regains Hit Points equal to 5d8 plus your spellcasting ability modifier.</p>`,
+                upcast: "The healing increases by 1d8 for each spell slot level above 5."
             }
         };
 
