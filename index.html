@@ -1363,7 +1363,6 @@
                     <span class="spell-link" data-spell="enlarge-reduce">Enlarge/Reduce</span> <span class="spell-tag subclass">SUB</span>, 
                     <span class="spell-link" data-spell="prayer-of-healing">Prayer of Healing</span> <span class="spell-tag moh">MoH</span>, 
                     <span class="spell-link" data-spell="arcane-vigor">Arcane Vigor</span> <span class="spell-tag moh">MoH</span>, 
-                    <span class="spell-link" data-spell="regenerating-ward">Regenerating Ward</span>,
                     <span class="spell-link" data-spell="warding-bond">Warding Bond</span>,
                     <span class="spell-link" data-spell="misty-step">Misty Step</span>
                 </div>
@@ -1376,9 +1375,10 @@
                     <span class="spell-link" data-spell="haste">Haste</span> <span class="spell-tag subclass">SUB</span>, 
                     <span class="spell-link" data-spell="aura-of-vitality">Aura of Vitality</span> <span class="spell-tag moh">MoH</span>, 
                     <span class="spell-link" data-spell="mass-healing-word">Mass Healing Word</span> <span class="spell-tag moh">MoH</span>, 
-                    <span class="spell-link" data-spell="beacon-of-hope">Beacon of Hope</span>, 
-                    <span class="spell-link" data-spell="sending">Sending</span>, 
-                    <span class="spell-link" data-spell="synergize">Synergize</span>
+                    <span class="spell-link" data-spell="beacon-of-hope">Beacon of Hope</span>,
+                    <span class="spell-link" data-spell="sending">Sending</span>,
+                    <span class="spell-link" data-spell="synergize">Synergize</span>,
+                    <span class="spell-link" data-spell="dispel-magic">Dispel Magic</span>
                 </div>
             </div>
 
@@ -1643,17 +1643,17 @@
                 description: `<p>You tap into your life force to heal yourself. Roll one or two of your unexpended Hit Point Dice, and regain a number of Hit Points equal to the roll's total plus your spellcasting ability modifier. Those dice are then expended.</p>`,
                 upcast: "The number of unexpended Hit Dice you can roll increases by one for each spell slot level above 2."
             },
-            "regenerating-ward": {
-                name: "Regenerating Ward",
-                level: "2nd",
+            "dispel-magic": {
+                name: "Dispel Magic",
+                level: "3rd",
                 school: "Abjuration",
                 type: "normal",
                 castingTime: "Action",
-                range: "30 feet",
+                range: "120 feet",
                 components: "V, S",
-                duration: "Concentration, up to 1 minute",
-                description: `<p>You create a regenerating abjurative force field around a single willing creature you can see within range. For the duration, the target gains a +1 bonus to its AC, and at the start of each of its turns, it gains a number of Temporary Hit Points equal to 2 plus your spellcasting ability modifier (7 THP for Elara). These Temporary Hit Points disappear when the spell ends.</p>`,
-                upcast: "You can target one additional creature for each slot level above 2."
+                duration: "Instantaneous",
+                description: `<p>Choose one creature, object, or magical effect within range. Any spell of level 3 or lower on the target ends. For each spell of level 4 or higher on the target, make an ability check using your spellcasting ability (DC 10 plus that spell's level). On a successful check, the spell ends.</p>`,
+                upcast: "You automatically end a spell on the target if the spell's level is equal to or less than the level of the spell slot you used."
             },
             "warding-bond": {
                 name: "Warding Bond",
