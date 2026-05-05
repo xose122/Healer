@@ -1386,7 +1386,6 @@
                     <span class="spell-link" data-spell="aura-of-vitality">Aura of Vitality</span> <span class="spell-tag moh">MoH</span>, 
                     <span class="spell-link" data-spell="mass-healing-word">Mass Healing Word</span> <span class="spell-tag moh">MoH</span>, 
                     <span class="spell-link" data-spell="beacon-of-hope">Beacon of Hope</span>,
-                    <span class="spell-link" data-spell="sending">Sending</span>,
                     <span class="spell-link" data-spell="synergize">Synergize</span>,
                     <span class="spell-link" data-spell="dispel-magic">Dispel Magic</span>
                 </div>
@@ -1411,6 +1410,7 @@
                     <span class="spell-link" data-spell="jotunn-transformation">Jotunn Transformation</span> <span class="spell-tag subclass">SUB</span>,
                     <span class="spell-link" data-spell="greater-restoration">Greater Restoration</span> <span class="spell-tag moh">MoH</span>,
                     <span class="spell-link" data-spell="territory-of-the-self">Territory of the Self</span> <span class="spell-tag urzha">URZ</span>,
+                    <span class="spell-link" data-spell="raise-dead">Raise Dead</span>,
                     <span class="spell-link" data-spell="circle-of-power">Circle of Power</span>,
                     <span class="spell-link" data-spell="mass-cure-wounds">Mass Cure Wounds</span>,
                     <span class="spell-link" data-spell="teleportation-circle">Teleportation Circle</span>
@@ -1759,16 +1759,18 @@
                 duration: "Concentration, up to 1 minute",
                 description: `<p>Choose any number of creatures within range. For the duration, each target has Advantage on Wisdom saving throws and Death Saving Throws, and regains the maximum number of Hit Points possible from any healing.</p>`
             },
-            "sending": {
-                name: "Sending",
-                level: "3rd",
-                school: "Divination",
+            "raise-dead": {
+                name: "Raise Dead",
+                level: "5th",
+                school: "Necromancy",
                 type: "normal",
-                castingTime: "Action",
-                range: "Unlimited",
-                components: "V, S, M (a copper wire)",
+                castingTime: "1 hour",
+                range: "Touch",
+                components: "V, S, M (a diamond worth 500+ GP, which the spell consumes)",
                 duration: "Instantaneous",
-                description: `<p>You send a short message of 25 words or fewer to a creature you have met or a creature described to you by someone who has met it. The target hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables targets to understand the meaning of your message. You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive. You know if the delivery fails. Upon receiving your message, a creature can block your ability to reach it again with this spell for 8 hours. If you try to send another message during that time, you learn that you are blocked, and the spell fails.</p>`
+                description: `<p>With a touch, you revive a dead creature if it has been dead no longer than 10 days and it wasn't Undead when it died. The creature returns to life with 1 Hit Point. This spell also neutralizes any poisons that affected the creature at the time of death.</p>
+                <p>This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival — its head, for instance — the spell automatically fails.</p>
+                <p>Coming back from the dead is an ordeal. The target takes a −4 penalty to D20 Tests. Every time the target finishes a Long Rest, the penalty is reduced by 1 until it becomes 0.</p>`
             },
             "synergize": {
                 name: "Synergize",
